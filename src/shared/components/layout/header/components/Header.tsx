@@ -1,16 +1,25 @@
-import { Layout, Badge, Avatar, Dropdown } from "antd";
-import { UserOutlined, DownOutlined, BellOutlined } from "@ant-design/icons";
+import { Layout, Badge, Avatar, Dropdown, Button } from "antd";
+import { UserOutlined, DownOutlined, BellOutlined, SunOutlined, MoonOutlined } from "@ant-design/icons";
 import { generateUserMenuItems } from "./userMenuData";
 import { generateNotificationItems } from "./notificationData";
+import { useTheme } from "../../../../contexts/ThemeContext";
 import "../styles/Header.scss";
 
 const { Header } = Layout;
 
 export function AppHeader() {
+  const { isDarkMode, toggleTheme } = useTheme();
+
   return (
     <Header className="header">
       <div className="header-greeting">Hello! Genesis</div>
       <div className="header-actions">
+        <Button
+          type="text"
+          icon={isDarkMode ? <SunOutlined /> : <MoonOutlined />}
+          onClick={toggleTheme}
+          className="theme-toggle"
+        />
         <Dropdown 
           menu={{ items: generateNotificationItems() }} 
           placement="bottomRight"

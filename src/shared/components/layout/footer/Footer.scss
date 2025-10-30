@@ -1,0 +1,31 @@
+@import "../../../styles/component-templates.scss";
+
+.footer {
+  @extend .theme-footer;
+}
+
+.github-icon {
+  @extend .theme-footer-icon;
+}
+
+.youtube-icon {
+  @extend .theme-footer-icon;
+  color: red;
+  
+  &:hover {
+    color: #ff0000;
+  }
+}
+
+.discord-icon {
+  @extend .theme-footer-icon;
+  color: purple;
+  
+  &:hover {
+    color: #5865f2;
+  }
+}
+
+.footer-text {
+  @extend .theme-footer-text;
+}

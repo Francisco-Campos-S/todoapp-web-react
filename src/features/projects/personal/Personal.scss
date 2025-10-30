@@ -1,0 +1,52 @@
+.personal-container {
+  padding: 16px;
+  
+  .personal-header {
+    margin-bottom: 16px;
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .header-left {
+        .header-title {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+          
+          .title-icon {
+            margin-right: 8px;
+            font-size: 24px;
+            color: #52c41a; /* Color verde para personal */
+          }
+        }
+        
+        .header-subtitle {
+          color: rgba(0, 0, 0, 0.45);
+        }
+      }
+      
+      .header-right {
+        .header-info {
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+/* Estilos para modo oscuro */
+[data-theme='dark'] {
+  .personal-container {
+    .personal-header {
+      .header-content {
+        .header-left {
+          .header-subtitle {
+            color: rgba(255, 255, 255, 0.65);
+          }
+        }
+      }
+    }
+  }
+}

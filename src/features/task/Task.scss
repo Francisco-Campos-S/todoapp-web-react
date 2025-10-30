@@ -1,4 +1,7 @@
+@import "../../../shared/styles/component-templates.scss";
+
 .task-input {
   width: 100%;
   margin: 30px 0;
+  @extend .theme-transition;
 }

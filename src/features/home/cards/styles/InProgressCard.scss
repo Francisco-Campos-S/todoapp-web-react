@@ -1,10 +1,7 @@
+@import "../../../../shared/styles/component-templates.scss";
+
 .in-progress-card {
-  background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(24, 144, 255, 0.15);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+  @extend .theme-dashboard-card;
   overflow: hidden;
   height: 200px;
 
@@ -95,7 +92,7 @@
 }
 
 .in-progress-icon {
-  color: #1890ff;
+  color: var(--primary-color);
   font-size: 48px;
   filter: drop-shadow(0 4px 8px rgba(24, 144, 255, 0.4));
   animation: spin 3s linear infinite;
@@ -116,7 +113,7 @@
 }
 
 .secondary-icon {
-  color: #40a9ff;
+  color: var(--primary-color);
   font-size: 24px;
   opacity: 0.8;
   transition: all 0.3s ease;
@@ -128,7 +125,7 @@
 }
 
 .in-progress-title {
-  color: #096dd9;
+  color: var(--primary-color);
   font-weight: 700;
   font-size: 14px;
   display: flex;
@@ -156,7 +153,7 @@
 
 .statistic-custom {
   .ant-statistic-content-value {
-    color: #1890ff !important;
+    color: var(--primary-color) !important;
     font-size: 42px !important;
     font-weight: 900 !important;
     text-shadow: 0 3px 6px rgba(24, 144, 255, 0.3);
@@ -164,7 +161,6 @@
     margin-top: 8px;
   }
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -182,3 +178,4 @@
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+

@@ -1,0 +1,177 @@
+// ========================================
+// TEMPLATES FOR PROJECT ITEMS
+// ========================================
+
+// Template for project items
+.project-item-template {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  border-radius: 8px;
+  padding: 20px;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--card-shadow-hover);
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    gap: 16px;
+  }
+  
+  .project-info {
+    flex: 1;
+  }
+  
+  .project-title-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .project-title {
+    color: var(--text-color);
+    margin: 0 !important;
+    font-size: 18px;
+    font-weight: 600;
+    flex: 1;
+  }
+  
+  .project-description {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .project-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  
+  .project-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .project-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .meta-item {
+    color: var(--text-secondary);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .project-team {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .team-label {
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+// Template for status icons
+.status-icon-template {
+  font-size: 20px;
+  
+  &.completed {
+    color: var(--secondary-color);
+  }
+  
+  &.in-progress {
+    color: var(--primary-color);
+  }
+  
+  &.pending {
+    color: var(--warning-color);
+  }
+  
+  &.error {
+    color: var(--error-color);
+  }
+}
+
+// Template for action buttons
+.action-button-template {
+  border: 1px solid var(--border-color);
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 6px 12px;
+  height: auto;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  
+  &:hover {
+    background: var(--background-secondary);
+    border-color: var(--primary-color);
+  }
+  
+  &.edit-btn {
+    color: var(--primary-color);
+    
+    &:hover {
+      background: rgba(22, 119, 255, 0.1);
+      color: var(--primary-color);
+    }
+  }
+  
+  &.delete-btn {
+    color: var(--error-color);
+    
+    &:hover {
+      background: rgba(255, 77, 79, 0.1);
+      color: var(--error-color);
+    }
+  }
+}
+
+// Template for priority badges
+.priority-badge-template {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Specific utilities for project items
+.theme-project-item {
+  @extend .project-item-template;
+}
+
+.theme-status-icon {
+  @extend .status-icon-template;
+}
+
+.theme-action-button {
+  @extend .action-button-template;
+}
+
+.theme-priority-badge {
+  @extend .priority-badge-template;
+}

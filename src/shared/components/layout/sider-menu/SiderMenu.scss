@@ -1,20 +1,16 @@
+@import "../../../styles/component-templates.scss";
+
 .sider-container {
-  padding: 16px 0;
+  @extend .theme-sider;
 }
 
 .sider-title {
-  padding: 0 24px;
-  margin-bottom: 16px;
-}
-
-.sider-title-text {
-  color: #fff;
-  margin: 0;
+  @extend .theme-sider-title;
 }
 
 .menu-group-label {
+  @extend .theme-text-primary;
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #fff;
 }

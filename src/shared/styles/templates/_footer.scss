@@ -1,0 +1,46 @@
+// ========================================
+// PLANTILLAS PARA FOOTER
+// ========================================
+
+// Plantilla completa para footer
+.footer-template {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: var(--footer-padding);
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Plantilla para iconos de footer
+.footer-icon-template {
+  color: var(--footer-text);
+  font-size: var(--footer-icon-size);
+  margin: var(--footer-icon-margin);
+  transition: color 0.3s, transform 0.2s;
+  
+  &:hover {
+    text-shadow: 0 0 8px currentColor;
+    transform: scale(1.2);
+  }
+}
+
+// Plantilla para texto de footer
+.footer-text-template {
+  text-align: center;
+  color: var(--footer-text);
+  font-size: var(--footer-text-size);
+  margin-top: var(--footer-text-margin);
+}
+
+// Utilidades específicas para footer
+.theme-footer {
+  @extend .footer-template;
+}
+
+.theme-footer-icon {
+  @extend .footer-icon-template;
+}
+
+.theme-footer-text {
+  @extend .footer-text-template;
+}

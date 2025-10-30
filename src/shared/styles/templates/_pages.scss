@@ -1,0 +1,45 @@
+// ========================================
+// PLANTILLAS PARA PÁGINAS
+// ========================================
+
+// Plantilla para contenedores de página
+.page-container-template {
+  background-color: var(--page-bg);
+  padding: var(--page-padding);
+  min-height: var(--page-min-height);
+  transition: background-color 0.3s ease;
+}
+
+// Plantilla para not found
+.not-found-template {
+  min-height: var(--page-min-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--not-found-padding);
+  background-color: var(--not-found-bg);
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
+
+// Utilidades específicas para páginas
+.theme-page-container {
+  @extend .page-container-template;
+}
+
+.theme-not-found {
+  @extend .not-found-template;
+}

@@ -1,0 +1,107 @@
+// ========================================
+// LIGHT THEME VARIABLES
+// ========================================
+
+:root {
+  // Primary colors - Light theme
+  --primary-color: #1677ff;
+  --secondary-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #ff4d4f;
+  
+  // Text colors - Light theme
+  --text-color: #262626;
+  --text-secondary: #8c8c8c;
+  
+  // Background colors - Light theme
+  --background-color: #ffffff;
+  --background-secondary: #fafafa;
+  
+  // Border and shadow colors - Light theme
+  --border-color: #d9d9d9;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  // Header specific - Light theme
+  --header-bg: #e6f4ff;
+  --header-text: #262626;
+  --header-icon: #262626;
+  --header-icon-hover: #1677ff;
+  --header-border: #bae0ff;
+  --header-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --header-padding: 0 24px;
+  --header-height: 64px;
+  
+  // Sider specific - Light theme
+  --sider-bg: #e6f4ff;
+  --sider-text: #262626;
+  --sider-border: #bae0ff;
+  --sider-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --sider-padding: 16px 0;
+  
+  // Footer specific - Light theme
+  --footer-bg: #e6f4ff;
+  --footer-text: #262626;
+  --footer-padding: 24px;
+  --footer-icon-size: 24px;
+  --footer-icon-margin: 0 8px;
+  --footer-text-size: 14px;
+  --footer-text-margin: 16px 0 0 0;
+  
+  // Dashboard specific - Light theme
+  --dashboard-bg: #f5f5f5;
+  --dashboard-padding: 24px;
+  --dashboard-header-radius: 12px;
+  --dashboard-header-gradient: linear-gradient(135deg, #1677ff 0%, #764ba2 100%);
+  --dashboard-card-radius: 12px;
+  --dashboard-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --dashboard-card-height: 120px;
+  
+  // Login specific - Light theme
+  --login-bg: #f5f5f5;
+  --login-form-padding: 24px;
+  --login-form-radius: 12px;
+  --login-head-bg: #ffffff;
+  --login-head-title-size: 24px;
+  --login-head-title-weight: 600;
+  
+  // Pages specific - Light theme
+  --page-bg: #f5f5f5;
+  --page-padding: 24px;
+  --page-min-height: 100vh;
+  --not-found-bg: #f5f5f5;
+  --not-found-padding: 24px;
+  
+  // Forms specific - Light theme
+  --form-label-weight: 500;
+  --form-label-margin: 8px 0;
+  --form-input-radius: 8px;
+  --form-input-padding: 12px 16px;
+  --form-focus-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+  
+  // Buttons specific - Light theme
+  --button-border: 1px solid #d9d9d9;
+  --button-radius: 8px;
+  --button-padding: 8px 16px;
+  --button-focus-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+  --button-active-transform: scale(0.98);
+  
+  // Cards specific - Light theme
+  --card-bg: #ffffff;
+  --card-border: #d9d9d9;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --card-radius: 12px;
+  --card-padding: 24px;
+  --card-title-weight: 600;
+  --card-title-size: 18px;
+  --card-title-margin: 0 0 16px 0;
+  --card-content-size: 14px;
+  --card-content-line-height: 1.5;
+  --card-actions-margin: 16px 0 0 0;
+  --card-actions-gap: 8px;
+  
+  // Additional states - Light theme
+  --hover-bg: rgba(0, 0, 0, 0.04);
+  --focus-border: #1677ff;
+  --focus-shadow: rgba(22, 119, 255, 0.2);
+}

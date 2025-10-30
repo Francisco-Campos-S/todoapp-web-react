@@ -1,52 +1,27 @@
+@import "../../shared/styles/component-templates.scss";
+
 .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #121212;
-  padding: 20px;
+  @extend .theme-login-container;
 }
 
-/* CARD */
 .login-card,
 .ant-card.login-card {
-  background-color: #2A2A2A;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55);
-  color: #f5f5f5;
-
-  .ant-card-head {
-    background: #2A2A2A;
-    border-bottom: 1px solid #3a3a3a;
-    border-radius: 12px 12px 0 0;
-  }
-
-  .ant-card-head-title {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-  }
+  @extend .theme-login-form;
 }
 
-/* FORM */
 .login-form {
-  color: #f5f5f5;
+  @extend .theme-text-primary;
 
   .ant-form-item-label > label {
-    color: #cfcfcf;
+    @extend .theme-text-secondary;
     font-weight: 500;
   }
 
-  /* INPUTS */
   .ant-input-affix-wrapper {
+    @extend .theme-input;
     width: 100%;
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-    border-radius: 8px;
     height: 44px;
-    color: #f5f5f5;
-    transition: all 0.25s ease;
+    border-radius: 8px;
 
     &:hover,
     &:focus,
@@ -58,8 +33,8 @@
   }
 
   .ant-input {
+    @extend .theme-text-primary;
     background: transparent;
-    color: #f5f5f5;
 
     &::placeholder {
       color: #b0b0b0;
@@ -67,33 +42,28 @@
     }
   }
 
-.ant-input-password-icon,
-.ant-input-clear-icon {
-  svg {
-    fill: #f5f5f5 !important;
-    cursor: pointer;
-    transition: fill 0.2s;
+  .ant-input-password-icon,
+  .ant-input-clear-icon {
+    svg {
+      fill: #f5f5f5 !important;
+      cursor: pointer;
+      transition: fill 0.2s;
+    }
+
+    &:hover svg {
+      fill: #BB86FC !important;
+    }
   }
 }
 
-.ant-input-password-icon:hover,
-.ant-input-clear-icon:hover {
-  svg {
-    fill: #BB86FC !important;
-  }
-}
-
-}
-
-/* BOTÓN */
 .login-form-button {
+  @extend .theme-button;
   background-color: #BB86FC;
   border: none;
   height: 44px;
   font-weight: 700;
   border-radius: 10px;
   margin-top: 8px;
-  transition: transform 0.15s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 
   &:hover {
     background-color: #a56efc !important;
@@ -102,7 +72,6 @@
   }
 }
 
-/* LINKS */
 .login-links {
   margin-top: 14px;
   text-align: center;

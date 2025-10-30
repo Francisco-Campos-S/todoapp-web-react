@@ -1,0 +1,112 @@
+// ========================================
+// TEMPLATES FOR CONTENT SECTIONS
+// ========================================
+
+// Template for content containers
+.content-container-template {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  border-radius: 8px;
+  padding: 24px;
+  
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+  }
+  
+  &:focus-within {
+    border-color: var(--focus-border);
+    box-shadow: 0 0 0 2px var(--focus-shadow);
+  }
+}
+
+// Template for content titles
+.content-title-template {
+  color: var(--text-color);
+  margin-bottom: 16px !important;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+// Template for content text
+.content-text-template {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Template for content headers with gradient
+.content-header-template {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .header-left {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .header-right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .header-title {
+    color: white !important;
+    margin-bottom: 8px !important;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    
+    .title-icon {
+      font-size: 28px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  
+  .header-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .header-info {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+// Specific utilities for content
+.theme-content-container {
+  @extend .content-container-template;
+}
+
+.theme-content-title {
+  @extend .content-title-template;
+}
+
+.theme-content-text {
+  @extend .content-text-template;
+}
+
+.theme-content-header {
+  @extend .content-header-template;
+}

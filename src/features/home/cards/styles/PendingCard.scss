@@ -1,10 +1,7 @@
+@import "../../../../shared/styles/component-templates.scss";
+
 .pending-card {
-  background: linear-gradient(135deg, #fffbe6 0%, #fff7e6 100%);
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(250, 173, 20, 0.15);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+  @extend .theme-dashboard-card;
   overflow: hidden;
   height: 200px;
 
@@ -95,7 +92,7 @@
 }
 
 .pending-icon {
-  color: #faad14;
+  color: var(--warning-color);
   font-size: 48px;
   filter: drop-shadow(0 4px 8px rgba(250, 173, 20, 0.4));
   animation: tick 2s ease-in-out infinite;
@@ -116,7 +113,7 @@
 }
 
 .secondary-icon {
-  color: #ffc53d;
+  color: var(--warning-color);
   font-size: 24px;
   opacity: 0.8;
   transition: all 0.3s ease;
@@ -128,7 +125,7 @@
 }
 
 .pending-title {
-  color: #d48806;
+  color: var(--warning-color);
   font-weight: 700;
   font-size: 14px;
   display: flex;
@@ -156,7 +153,7 @@
 
 .statistic-custom {
   .ant-statistic-content-value {
-    color: #faad14 !important;
+    color: var(--warning-color) !important;
     font-size: 42px !important;
     font-weight: 900 !important;
     text-shadow: 0 3px 6px rgba(250, 173, 20, 0.3);
@@ -164,7 +161,6 @@
     margin-top: 8px;
   }
 }
-
 @keyframes tick {
   0%, 100% {
     transform: rotate(0deg);
@@ -185,3 +181,4 @@
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+

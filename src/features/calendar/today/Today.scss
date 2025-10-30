@@ -1,0 +1,12 @@
+@import "../../../shared/styles/variables.scss";
+@import "../../../shared/styles/component-templates.scss";
+
+// Template example - Ultra-optimized
+.today-container {
+  @extend .theme-page-container;
+}
+
+// Header using templates
+.today-header {
+  @extend .theme-content-header;
+}

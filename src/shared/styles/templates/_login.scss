@@ -1,0 +1,56 @@
+// ========================================
+// PLANTILLAS PARA LOGIN
+// ========================================
+
+// Plantilla para contenedor de login
+.login-container-template {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--login-bg);
+  padding: var(--login-form-padding);
+  transition: background-color 0.3s ease;
+}
+
+// Plantilla para formulario de login
+.login-form-template {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  border-radius: var(--login-form-radius);
+  color: var(--text-color);
+
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+  }
+  
+  &:focus-within {
+    border-color: var(--focus-border);
+    box-shadow: 0 0 0 2px var(--focus-shadow);
+  }
+
+  .ant-card-head {
+    background-color: var(--login-head-bg);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: var(--login-form-radius) var(--login-form-radius) 0 0;
+  }
+
+  .ant-card-head-title {
+    color: var(--text-color);
+    font-size: var(--login-head-title-size);
+    font-weight: var(--login-head-title-weight);
+    text-align: center;
+  }
+}
+
+// Utilidades específicas para login
+.theme-login-container {
+  @extend .login-container-template;
+}
+
+.theme-login-form {
+  @extend .login-form-template;
+}

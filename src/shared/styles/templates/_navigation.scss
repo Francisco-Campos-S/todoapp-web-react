@@ -1,0 +1,177 @@
+// ========================================
+// TEMPLATES FOR NAVIGATION ELEMENTS
+// ========================================
+
+// Template for navigation containers
+.navigation-container-template {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+// Template for navigation items
+.navigation-item-template {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  
+  &:hover {
+    background: var(--background-secondary);
+    color: var(--primary-color);
+  }
+  
+  &.active {
+    background: var(--primary-color);
+    color: white;
+    
+    &:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+  }
+  
+  .nav-icon {
+    font-size: 16px;
+  }
+  
+  .nav-text {
+    font-size: 14px;
+  }
+}
+
+// Template for breadcrumbs
+.breadcrumb-template {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  font-size: 14px;
+  
+  .breadcrumb-item {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: var(--primary-color);
+    }
+    
+    &.active {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+  }
+  
+  .breadcrumb-separator {
+    color: var(--text-secondary);
+    font-size: 12px;
+  }
+}
+
+// Template for tabs
+.tabs-template {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 16px;
+  
+  .tab-list {
+    display: flex;
+    gap: 0;
+  }
+  
+  .tab-item {
+    padding: 12px 16px;
+    border-bottom: 2px solid transparent;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: var(--primary-color);
+      background: var(--background-secondary);
+    }
+    
+    &.active {
+      color: var(--primary-color);
+      border-bottom-color: var(--primary-color);
+      background: var(--background-secondary);
+    }
+  }
+}
+
+// Template for pagination
+.pagination-template {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 0;
+  
+  .pagination-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: var(--background-secondary);
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+    
+    &.active {
+      background: var(--primary-color);
+      border-color: var(--primary-color);
+      color: white;
+    }
+    
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      
+      &:hover {
+        background: transparent;
+        border-color: var(--border-color);
+        color: var(--text-color);
+      }
+    }
+  }
+}
+
+// Specific utilities for navigation
+.theme-navigation-container {
+  @extend .navigation-container-template;
+}
+
+.theme-navigation-item {
+  @extend .navigation-item-template;
+}
+
+.theme-breadcrumb {
+  @extend .breadcrumb-template;
+}
+
+.theme-tabs {
+  @extend .tabs-template;
+}
+
+.theme-pagination {
+  @extend .pagination-template;
+}

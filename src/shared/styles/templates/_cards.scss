@@ -1,0 +1,48 @@
+// ========================================
+// PLANTILLAS PARA TARJETAS GENERALES
+// ========================================
+
+// Plantilla base para tarjetas
+.card-template {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+  }
+  
+  &:focus-within {
+    border-color: var(--focus-border);
+    box-shadow: 0 0 0 2px var(--focus-shadow);
+  }
+  
+  .card-title {
+    color: var(--text-color);
+    font-weight: var(--card-title-weight);
+    font-size: var(--card-title-size);
+    margin-bottom: var(--card-title-margin);
+  }
+  
+  .card-content {
+    color: var(--text-secondary);
+    font-size: var(--card-content-size);
+    line-height: var(--card-content-line-height);
+  }
+  
+  .card-actions {
+    margin-top: var(--card-actions-margin);
+    display: flex;
+    gap: var(--card-actions-gap);
+    justify-content: flex-end;
+  }
+}
+
+// Utilidades específicas para tarjetas
+.theme-card {
+  @extend .card-template;
+}

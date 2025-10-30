@@ -35,7 +35,7 @@ export const userMenuItemsData: UserMenuItemInfo[] = [
 export const generateUserMenuItems = (): MenuProps["items"] => {
   const menuItems: MenuProps["items"] = [];
   
-  userMenuItemsData.forEach((item, index) => {
+  userMenuItemsData.forEach((item) => {
     if (item.key === "settings") {
       // Add divider before settings
       menuItems.push({

@@ -1,7 +1,8 @@
-import React, { use, useState } from "react";
+import { useState } from "react";
 import { Layout, Menu } from "antd";
 import { groupedMenuItems } from "./menuData";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../../../contexts/ThemeContext";
 import "./SiderMenu.scss";
 
 const { Sider } = Layout;
@@ -9,7 +10,7 @@ const { Sider } = Layout;
 export function SiderMenu() {
   const [selectedKey, setSelectedKey] = useState("todo-1");
   const navigate = useNavigate();
-
+  const { isDarkMode } = useTheme();
 
   return (
     <Sider
@@ -20,7 +21,7 @@ export function SiderMenu() {
       className="sider-container"
     >
       <Menu
-        theme="dark"
+        theme={isDarkMode ? "dark" : "light"}
         mode="inline"
         selectedKeys={[selectedKey]}
         onClick={({ key }) => {setSelectedKey(key); navigate(key);}}

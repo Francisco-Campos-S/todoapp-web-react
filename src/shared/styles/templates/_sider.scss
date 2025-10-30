@@ -1,0 +1,72 @@
+// ========================================
+// SIDER MENU TEMPLATES
+// ========================================
+
+// Complete template for sider menu
+.sider-template {
+  background-color: var(--sider-bg);
+  color: var(--sider-text);
+  border-right: 1px solid var(--sider-border);
+  box-shadow: var(--sider-shadow);
+  padding: var(--sider-padding);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  
+  .ant-menu {
+    background-color: var(--sider-bg);
+    color: var(--sider-text);
+    border-right: none;
+    
+    .ant-menu-item {
+      color: var(--sider-text);
+      border-bottom: 1px solid var(--sider-border);
+      
+      &:hover {
+        background-color: var(--background-secondary);
+        color: var(--sider-text);
+      }
+      
+      &.ant-menu-item-selected {
+        background-color: var(--primary-color);
+        color: #ffffff;
+        border-bottom: 1px solid var(--primary-color);
+      }
+    }
+    
+    .ant-menu-submenu {
+      border-bottom: 1px solid var(--sider-border);
+      
+      .ant-menu-submenu-title {
+        color: var(--sider-text);
+        
+        &:hover {
+          background-color: var(--background-secondary);
+          color: var(--sider-text);
+        }
+      }
+    }
+  }
+}
+
+// Template for sider titles
+.sider-title-template {
+  padding: 0 24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--sider-border);
+  padding-bottom: 16px;
+  
+  .sider-title-text {
+    color: var(--sider-text);
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+// Specific utilities for sider
+.theme-sider {
+  @extend .sider-template;
+}
+
+.theme-sider-title {
+  @extend .sider-title-template;
+}

@@ -1,66 +1,23 @@
-// Variables
-$primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-$background-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-$white: white;
-$shadow-light: 0 8px 32px rgba(0, 0, 0, 0.12);
-$shadow-badge: 0 4px 16px rgba(24, 144, 255, 0.3);
-$text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-$border-radius: 20px;
-$transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+@import "../../shared/styles/component-templates.scss";
 
+// Ultra-optimized Home component using only templates
 .dashboard-container {
-  padding: 32px;
-  background: $background-gradient;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
+  @extend .theme-dashboard-container;
 }
 
 .dashboard-header {
-  margin-bottom: 32px;
-  border-radius: $border-radius;
-  box-shadow: $shadow-light;
-  background: $primary-gradient;
-  border: none;
-  position: relative;
-  overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  
-  .ant-card-body {
-    background: transparent;
-    position: relative;
-    z-index: 2;
-  }
+  @extend .theme-dashboard-header;
 }
 
+.dashboard-content {
+  @extend .theme-content-container;
+}
+
+.dashboard-grid {
+  @extend .theme-content-container;
+}
+
+// Minimal styles for layout elements
 .header-content {
   display: flex;
   align-items: center;
@@ -73,25 +30,6 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
   gap: 24px;
   flex: 1;
-}
-
-.icon-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: pulse-glow 3s ease-in-out infinite;
 }
 
 .title-section {
@@ -113,8 +51,7 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 .stat-number {
   font-size: 24px;
   font-weight: 800;
-  color: $white;
-  text-shadow: $text-shadow;
+  color: white;
   line-height: 1;
 }
 
@@ -131,69 +68,25 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
 }
 
-.stats-icon-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.stats-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-.dashboard-icon {
-  font-size: 40px;
-  color: $white;
-  text-shadow: $text-shadow;
-  z-index: 3;
-  position: relative;
-}
-
-.dashboard-title {
-  font-size: 36px !important;
-  font-weight: 800 !important;
-  color: $white !important;
-  margin: 0 !important;
-  text-shadow: $text-shadow;
-  letter-spacing: -0.5px;
-}
-
-.dashboard-subtitle {
-  font-size: 16px !important;
-  color: rgba(255, 255, 255, 0.85) !important;
-  margin-top: 8px !important;
-  font-weight: 400;
-}
-
+// Fix Badge positioning
 .total-badge {
   .ant-badge-count {
     font-size: 16px;
     font-weight: 700;
-    box-shadow: $shadow-badge;
+    box-shadow: 0 4px 16px rgba(24, 144, 255, 0.3);
     border: 2px solid rgba(255, 255, 255, 0.3);
   }
 }
 
 .stats-icon {
   font-size: 28px;
-  color: $white;
+  color: white;
   padding: 16px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 3;
-  position: relative;
-  transition: $transition;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   
   &:hover {
     background: rgba(255, 255, 255, 0.25);
@@ -231,107 +124,4 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.dashboard-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 2;
-}
-
-.dashboard-grid {
-  max-width: 1400px;
-  margin: 0 auto;
-  flex: 1;
-  position: relative;
-}
-
-// Animations
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.3;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-}
-
-// Responsive adjustments
-@media (max-width: 1200px) {
-  .dashboard-grid {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .dashboard-container {
-    padding: 20px;
-  }
-  
-  .dashboard-header {
-    .ant-card-body {
-      padding: 24px 20px !important;
-    }
-  }
-  
-  .header-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  
-  .header-left {
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .stats-row {
-    justify-content: center;
-    gap: 24px;
-  }
-  
-  .dashboard-title {
-    font-size: 28px !important;
-  }
-  
-  .dashboard-icon {
-    font-size: 32px;
-  }
-  
-  .stats-icon {
-    font-size: 24px;
-    padding: 12px;
-  }
-  
-  .section-divider {
-    margin: 32px 0;
-  }
-  
-  .divider-text {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .dashboard-container {
-    padding: 16px;
-  }
-  
-  .dashboard-title {
-    font-size: 24px !important;
-  }
-  
-  .stats-row {
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-  }
-  
-  .stat-item {
-    align-items: center;
-  }
 }

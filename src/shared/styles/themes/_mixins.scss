@@ -1,0 +1,102 @@
+// ========================================
+// GLOBAL MIXINS
+// ========================================
+
+// Mixin for theme transitions
+@mixin theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+// Base mixin for cards
+@mixin card-base {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  @include theme-transition;
+  
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+  }
+  
+  &:focus-within {
+    border-color: var(--focus-border);
+    box-shadow: 0 0 0 2px var(--focus-shadow);
+  }
+}
+
+// Text mixins
+@mixin text-primary {
+  color: var(--text-color);
+}
+
+@mixin text-secondary {
+  color: var(--text-secondary);
+}
+
+// Background mixins
+@mixin background-primary {
+  background-color: var(--background-color);
+}
+
+@mixin background-secondary {
+  background-color: var(--background-secondary);
+}
+
+// State mixins
+@mixin hover-state {
+  &:hover {
+    background-color: var(--hover-bg);
+  }
+}
+
+@mixin focus-state {
+  &:focus {
+    border-color: var(--focus-border);
+    box-shadow: 0 0 0 2px var(--focus-shadow);
+  }
+}
+
+// Button mixin
+@mixin button-base {
+  @include theme-transition;
+  border: var(--button-border);
+  background: var(--background-color);
+  color: var(--text-color);
+  border-radius: var(--button-radius);
+  padding: var(--button-padding);
+  
+  &:hover {
+    background: var(--background-secondary);
+    border-color: var(--primary-color);
+  }
+  
+  &:focus {
+    border-color: var(--primary-color);
+    box-shadow: var(--button-focus-shadow);
+  }
+  
+  &:active {
+    background-color: var(--background-secondary);
+    transform: var(--button-active-transform);
+  }
+}
+
+// Input mixin
+@mixin input-base {
+  @include theme-transition;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: var(--form-input-radius);
+  padding: var(--form-input-padding);
+  
+  &:focus {
+    border-color: var(--primary-color);
+    box-shadow: var(--form-focus-shadow);
+  }
+  
+  &::placeholder {
+    color: var(--text-secondary);
+  }
+}

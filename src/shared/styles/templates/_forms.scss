@@ -1,0 +1,54 @@
+// ========================================
+// PLANTILLAS PARA FORMULARIOS
+// ========================================
+
+// Plantilla base para formularios
+.form-template {
+  .form-label {
+    color: var(--text-color);
+    font-weight: var(--form-label-weight);
+    margin-bottom: var(--form-label-margin);
+    display: block;
+  }
+  
+  .form-input {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: var(--form-input-radius);
+    padding: var(--form-input-padding);
+    
+    &:focus {
+      border-color: var(--primary-color);
+      box-shadow: var(--form-focus-shadow);
+    }
+    
+    &::placeholder {
+      color: var(--text-secondary);
+    }
+  }
+}
+
+// Utilidades específicas para formularios
+.theme-form {
+  @extend .form-template;
+}
+
+.theme-input {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: var(--form-input-radius);
+  padding: var(--form-input-padding);
+  
+  &:focus {
+    border-color: var(--primary-color);
+    box-shadow: var(--form-focus-shadow);
+  }
+  
+  &::placeholder {
+    color: var(--text-secondary);
+  }
+}

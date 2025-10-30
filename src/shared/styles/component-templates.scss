@@ -1,0 +1,66 @@
+// ========================================
+// MAIN COMPONENT TEMPLATES FILE
+// ========================================
+
+// Import base variables
+@import "./variables.scss";
+
+// Import all templates by component
+@import "./templates/header";
+@import "./templates/sider";
+@import "./templates/footer";
+@import "./templates/dashboard";
+@import "./templates/login";
+@import "./templates/pages";
+@import "./templates/forms";
+@import "./templates/buttons";
+@import "./templates/cards";
+@import "./templates/content";
+@import "./templates/statistics";
+@import "./templates/projects";
+@import "./templates/navigation";
+@import "./templates/status";
+
+// ========================================
+// GLOBAL BASIC UTILITIES
+// ========================================
+
+// Base class for any component
+.component-base {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+// Basic utilities
+.theme-text-primary {
+  color: var(--text-color);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+.theme-bg-primary {
+  background-color: var(--background-color);
+}
+
+.theme-bg-secondary {
+  background-color: var(--background-secondary);
+}
+
+.theme-border {
+  border: 1px solid var(--border-color);
+}
+
+.theme-shadow {
+  box-shadow: var(--card-shadow);
+}
+
+.theme-shadow-hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
